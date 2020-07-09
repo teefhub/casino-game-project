@@ -1,11 +1,29 @@
-#include <iostream>
-#include <string> // Needed to use strings
-#include <cstdlib> // Needed to use random numbers
 #include <ctime>
+#include <iostream>
+#include <cstdlib>
+#include <string> 
+
 using namespace std;
  
-void drawLine(int n, char symbol);
-void rules();
+void drawLine(int n, char symbol)
+{
+    for(int i=0; i<n; i++)
+        cout << symbol;
+    cout << "\n" ;
+}
+ 
+void rules()
+{
+    system("cls");
+    cout << "\n\n";
+    drawLine(80,'-');
+    cout << "\t\tRULES OF THE GAME\n";
+    drawLine(80,'-');
+    cout << "\t1. Choose any number between 1 to 10\n";
+    cout << "\t2. If you win you will get 10 times of money you bet\n";
+    cout << "\t3. If you bet on wrong number you will lose your betting amount\n\n";
+    drawLine(80,'-');
+}
  
 int main()
 {
@@ -85,25 +103,3 @@ int main()
  
     return 0;
 }
- 
-void drawLine(int n, char symbol)
-{
-    for(int i=0; i<n; i++)
-        cout << symbol;
-    cout << "\n" ;
-}
- 
-void rules()
-{
-    system("cls");
-    cout << "\n\n";
-    drawLine(80,'-');
-    cout << "\t\tRULES OF THE GAME\n";
-    drawLine(80,'-');
-    cout << "\t1. Choose any number between 1 to 10\n";
-    cout << "\t2. If you win you will get 10 times of money you bet\n";
-    cout << "\t3. If you bet on wrong number you will lose your betting amount\n\n";
-    drawLine(80,'-');
-}
- 
-// END OF PROGRAM
